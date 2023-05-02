@@ -31,7 +31,8 @@ namespace SQLTermekek_Console2
             //termékfajták száma szerint csökkenő sorrendben. 
 
             string SQLselect =
-                "SELECT Kategória, COUNT(Kategória) as Darab FROM termékek " +
+                "SELECT Kategória, COUNT(Kategória) as Darab" + 
+                "FROM termékek " +
                 "GROUP BY 'Kategória' " +
                 "HAVING Darab>=100 " +
                 "ORDER BY Darab DESC";
